@@ -1,3 +1,18 @@
+
+// task 1
+
+
+const handleClick = (button) => {
+    let buttons = document.querySelectorAll('.button');
+    for(let i=0; i<buttons.length; i+=1) {
+        buttons[i].addEventListener('click', () => console.log(buttons[i].textContent));
+    }
+}
+
+// ('button:nth-child(2)')
+handleClick();
+
+
 // task 2
 
 const sum = (a = 0, b = 0) => a + b;
