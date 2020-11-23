@@ -9,33 +9,25 @@ const handleClick = (button) => {
     }
 }
 
-// ('button:nth-child(2)')
 handleClick();
 
 
 // task 2
 
-const sum = (a = 0, b = 0) => a + b;
-console.log(sum(10));
+const summation = (a = 0, b = 0) => a + b;
 
-function sub(a = 0, b = 0) {
-    return a - b;
-}
+const subtraction = (a = 0, b = 0) => a - b;
 
-function higherOrderFunction(fn1, fn2, x, y) {
-    return fn1(x, y) + fn2(x, y);
-}
-
-console.log(higherOrderFunction(sum, sub, 10));
-
-console.log(sum());
-
+console.log(summation(30));
+console.log(summation(30, 10));
+console.log(subtraction(10));
+console.log(subtraction(10, 5));
 
 
 // task 3
 
 const personDataLog = ({ firstName = 'John', lastName = 'Doe', age = 33 } = {}) => {
-    console.log('My name is ', firstName, lastName, '. Im ', age, 'years old');
+    console.log("My name is", firstName, lastName + ". I'm", age, "years old.");
 }
 
 const person = {
@@ -44,3 +36,8 @@ const person = {
 
 personDataLog(person);
 
+const person2 = {
+    firstName: 'Jim', lastName: 'Smith', age: 44
+};
+
+personDataLog(person2);
